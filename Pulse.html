@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Effect</title>
+    <style>
+        .pulse:hover, 
+        .pulse:focus {
+            animation: pulse 1s;
+            box-shadow: 0 0 0 2em transparent;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 var(--hover); }
+        }
+
+        button.pulse {
+            --hover: #ef6eae;
+            background: none;
+            border: 2px solid;
+            font: inherit;
+            line-height: 1;
+            margin: 0.5em;
+            padding: 1em 2em;
+            color: var(--hover);
+            transition: 0.25s;
+        }
+
+        button.pulse:hover,
+        button.pulse:focus {
+            border-color: var(--hover);
+            color: #fff;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: hsl(227, 10%, 10%);
+            color: #fff;
+            font: 300 1em 'Fira Sans', sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button class="pulse">Pulse</button>
+</body>
+</html>
